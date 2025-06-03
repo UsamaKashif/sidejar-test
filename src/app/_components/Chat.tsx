@@ -1,7 +1,13 @@
+"use client";
+
 import Image from 'next/image'
 import React from 'react'
 
-const Chat = () => {
+interface ChatProps {
+    message: string
+}
+
+const Chat = ({ message }: ChatProps) => {
     return (
         <section className='w-full bg-[#0062FF15] rounded-xl p-3 h-fit items-start space-y-2 text-[#1E1F24] text-sm'>
             <div className='flex items-start justify-between'>
@@ -11,11 +17,11 @@ const Chat = () => {
                 </div>
                 <div className='flex items-center gap-1 cursor-pointer'>
                     <Image src={"/rotate-arrow.svg"} alt="rotate-arrow" className='object-contain' width={16} height={16} />
-                    <p className='text-xs font-medium'>Regenerate</p>
+                    <button className='text-xs font-medium' >Regenerate</button>
                 </div>
             </div>
 
-            <p className='font-normal'>Oh no! Sad to hear that, but of course we can give a refund. Can you please provide your order number if you have one? Or email that you’ve used to make this purchase.</p>
+            <p className='font-normal'>{message}</p>
 
             <button className='font-medium text-[#000107E1] underline underline-offset-[6px]'>Reply with this message</button>
         </section>

@@ -14,8 +14,8 @@ const footer_icons = [
 
 const ChatBox = () => {
     return (
-        <section className='w-full bg-white rounded-xl shadow-fancy-2 py-3'>
-            <textarea className='w-full px-3 h-fit min-h-[44px] outline-none resize-none' placeholder='Type your message here...'></textarea>
+        <section className='w-full bg-white rounded-xl shadow-fancy-2 pb-[6px] overflow-hidden'>
+            <textarea className='w-full text-[#000107E1] font-normal text-[14px] pt-3 px-3 h-[44px] outline-none resize-none' placeholder='Type your message here...'></textarea>
             <div className='flex items-center justify-between px-[6px]'>
                 <div className='flex items-center gap-3'>
                     <span className='flex items-center gap-[6px]'>
